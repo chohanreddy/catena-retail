@@ -1,0 +1,20 @@
+CatenaRetail Data Quality Report
+generated: 2026-07-04T10:08:41.620635+00:00
+summary: 6/7 checks passed
+
+[PASS] schema_orders
+    all columns present
+[PASS] schema_customers
+    all columns present
+[PASS] nulls_orders_keys
+    no nulls in key fields
+[PASS] nulls_customer_id
+    no null customer_id
+[FAIL] referential_integrity
+    1 orphaned order(s)
+[PASS] dupes_order_id
+    no duplicate order_id
+[PASS] dupes_customer_id
+    no duplicate customer_id
+
+note: the referential_integrity fail is on purpose. the orphaned order is flagged, not dropped, so no revenue is lost.
